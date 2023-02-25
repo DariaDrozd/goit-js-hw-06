@@ -4,13 +4,13 @@
 
 
 
-const color = document.querySelector('.widget');
+const color = document.querySelector('body');
 const button = document.querySelector('.change-color');
 const span = document.querySelector('.color');
 
 button.addEventListener('click', event => {
-  color.style.color = getRandomHexColor();
-  span.textContent = color.style.color;
+  color.style.backgroundColor = getRandomHexColor();
+  span.textContent = color.style.backgroundColor;
 
 });
 

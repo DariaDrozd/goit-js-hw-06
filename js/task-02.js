@@ -6,9 +6,14 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const listEl = document.getElementById("ingredients");
-const foodI = ingredients.forEach(vallue => {
+const fragment = document.createDocumentFragment();
+
+ingredients.forEach(value => {
   const listItem = document.createElement('li');
-  listItem.innerHTML = vallue;
-  listEl.append(listItem);
+  listItem.classList.add('item');
+  listItem.textContent = value;
+  fragment.appendChild(listItem);
 });
+
+const listEl = document.getElementById('ingredients');
+listEl.appendChild(fragment);
